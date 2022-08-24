@@ -1,6 +1,6 @@
-%Script finds the verifies the upper bounds in rigorous way
+%Script finds and verifies the upper bounds for all strategy classes in a rigorous computer assisted proof way
 
-%Requires: MaxSuccessProb_com_anticom_task.m, MaxSuccessProb_Utrans.m from mtcq
+%Requires: MaxSuccessProb_Utrans.m, DefineSets_Utrans_symbolic.m from mtcq
 
 %Author: Marco Túlio Quintino, https://github.com/mtcq, mtcq.mm@gmail.com
 %Last update: 19/08/2022
