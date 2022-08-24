@@ -1,4 +1,4 @@
-%Script defines the considered in the discrimination task
+%Script defines the sets considered in the discrimination task
 
 %Requires: ChoiKetBra.m from mtcq
 
