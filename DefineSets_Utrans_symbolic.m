@@ -1,4 +1,4 @@
-%Script defines the considered in the discrimination task as symbolic variables
+%Script defines the sets considered in the discrimination task as symbolic variables
 
 %Requires: ChoiKetBra.m from mtcq
 
