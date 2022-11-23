@@ -1,9 +1,9 @@
-## Code to accompany: [Experimental superposition of time directions](https://arxiv.org/abs/xxxx.xxxx)
+## Code to accompany: [Experimental superposition of time directions](https://arxiv.org/abs/2211.01283)
 
 #### Teodor Strömberg, Peter Schiansky, Marco Túlio Quintino, Michael Antesberger, Lee Rozema, Iris Agresti, Caslav Brukner, and Philip Walther
 
 
-This is a repository for the article [Experimental superposition of time directions](https://arxiv.org/abs/xxxx.xxxx)
+This is a repository for the article [Experimental superposition of time directions](https://arxiv.org/abs/2211.01283)
 
  This code requires:
 - [cvx](http://cvxr.com/) - a free MATLAB toolbox for rapid prototyping of optimization problems.
