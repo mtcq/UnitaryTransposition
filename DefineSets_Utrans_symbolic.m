@@ -23,16 +23,28 @@ setP=sym(zeros(2^4,2^4,10));
 setM=sym(zeros(2^4,2^4,8));
 
 %Set channels of setM+ and setM- as Choi opreators
+%Set channels of setM+ and setM- as Choi opreators
 setP(:,:,1)=kron(ChoiKetBra(Id),ChoiKetBra(Id));
 setP(:,:,2)=kron(ChoiKetBra(Id),ChoiKetBra(X));
 setP(:,:,3)=kron(ChoiKetBra(Id),ChoiKetBra(Z));
+
 setP(:,:,4)=kron(ChoiKetBra(X),ChoiKetBra(Id));
 setP(:,:,5)=kron(ChoiKetBra(X),ChoiKetBra(X));
 setP(:,:,6)=kron(ChoiKetBra(X),ChoiKetBra(Z));
-setP(:,:,7)=kron(ChoiKetBra(XmY),ChoiKetBra(XpY));
-setP(:,:,8)=kron(ChoiKetBra(XpY),ChoiKetBra(XmY));
-setP(:,:,9)=kron(ChoiKetBra(ZmY),ChoiKetBra(ZpY));
-setP(:,:,10)=kron(ChoiKetBra(ZpY),ChoiKetBra(ZmY));
+
+setP(:,:,7)=kron(ChoiKetBra(Z),ChoiKetBra(Id));
+setP(:,:,8)=kron(ChoiKetBra(Z),ChoiKetBra(X));
+setP(:,:,9)=kron(ChoiKetBra(Z),ChoiKetBra(Z));
+
+setP(:,:,10)=kron(ChoiKetBra(XmY),ChoiKetBra(XpY));
+setP(:,:,11)=kron(ChoiKetBra(XpY),ChoiKetBra(XmY));
+setP(:,:,12)=kron(ChoiKetBra(ZmY),ChoiKetBra(ZpY));
+setP(:,:,13)=kron(ChoiKetBra(ZpY),ChoiKetBra(ZmY));
+% 
+%  setP(:,:,7)=kron(ChoiKetBra(XmY),ChoiKetBra(XpY));
+%  setP(:,:,8)=kron(ChoiKetBra(XpY),ChoiKetBra(XmY));
+%  setP(:,:,9)=kron(ChoiKetBra(ZmY),ChoiKetBra(ZpY));
+%  setP(:,:,10)=kron(ChoiKetBra(ZpY),ChoiKetBra(ZmY));
 
 setM(:,:,1)=kron(ChoiKetBra(Y),ChoiKetBra(Id));
 setM(:,:,2)=kron(ChoiKetBra(Y),ChoiKetBra(X));
@@ -43,11 +55,14 @@ setM(:,:,6)=kron(ChoiKetBra(Z),ChoiKetBra(Y));
 setM(:,:,7)=kron(ChoiKetBra((Id+sqrt(-1)*Y)/sqrt(2)),ChoiKetBra((Id-sqrt(-1)*Y)/sqrt(2)));
 setM(:,:,8)=kron(ChoiKetBra((Id-sqrt(-1)*Y)/sqrt(2)),ChoiKetBra((Id+sqrt(-1)*Y)/sqrt(2)));
 
+Np=size(setP,3);
+Nm=size(setM,3);
+
 setPsum=0;
-for i=1:10
+for i=1:Np
     setPsum=setPsum+setP(:,:,i);
 end
 setMsum=0;
-for i=1:8
+for i=1:Nm
     setMsum=setMsum+setM(:,:,i);
 end

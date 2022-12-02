@@ -1,9 +1,9 @@
-%Script defines the sets considered in the discrimination task
+%Script defines the considered in the discrimination task
 
 %Requires: ChoiKetBra.m from mtcq
 
 %Author: Marco Túlio Quintino, https://github.com/mtcq, mtcq.mm@gmail.com
-%Last update: 19/08/2022
+%Last update: 22/12/2022
 
 Id=eye(2);
 X=[0 1;1 0];
@@ -22,13 +22,24 @@ ZpY=(Z+Y)/sqrt(2);
 setP(:,:,1)=kron(ChoiKetBra(Id),ChoiKetBra(Id));
 setP(:,:,2)=kron(ChoiKetBra(Id),ChoiKetBra(X));
 setP(:,:,3)=kron(ChoiKetBra(Id),ChoiKetBra(Z));
+
 setP(:,:,4)=kron(ChoiKetBra(X),ChoiKetBra(Id));
 setP(:,:,5)=kron(ChoiKetBra(X),ChoiKetBra(X));
 setP(:,:,6)=kron(ChoiKetBra(X),ChoiKetBra(Z));
-setP(:,:,7)=kron(ChoiKetBra(XmY),ChoiKetBra(XpY));
-setP(:,:,8)=kron(ChoiKetBra(XpY),ChoiKetBra(XmY));
-setP(:,:,9)=kron(ChoiKetBra(ZmY),ChoiKetBra(ZpY));
-setP(:,:,10)=kron(ChoiKetBra(ZpY),ChoiKetBra(ZmY));
+
+setP(:,:,7)=kron(ChoiKetBra(Z),ChoiKetBra(Id));
+setP(:,:,8)=kron(ChoiKetBra(Z),ChoiKetBra(X));
+setP(:,:,9)=kron(ChoiKetBra(Z),ChoiKetBra(Z));
+
+setP(:,:,10)=kron(ChoiKetBra(XmY),ChoiKetBra(XpY));
+setP(:,:,11)=kron(ChoiKetBra(XpY),ChoiKetBra(XmY));
+setP(:,:,12)=kron(ChoiKetBra(ZmY),ChoiKetBra(ZpY));
+setP(:,:,13)=kron(ChoiKetBra(ZpY),ChoiKetBra(ZmY));
+% 
+%  setP(:,:,7)=kron(ChoiKetBra(XmY),ChoiKetBra(XpY));
+%  setP(:,:,8)=kron(ChoiKetBra(XpY),ChoiKetBra(XmY));
+%  setP(:,:,9)=kron(ChoiKetBra(ZmY),ChoiKetBra(ZpY));
+%  setP(:,:,10)=kron(ChoiKetBra(ZpY),ChoiKetBra(ZmY));
 
 setM(:,:,1)=kron(ChoiKetBra(Y),ChoiKetBra(Id));
 setM(:,:,2)=kron(ChoiKetBra(Y),ChoiKetBra(X));

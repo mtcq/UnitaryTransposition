@@ -1,21 +1,21 @@
-%Script finds and verifies the upper bounds for all strategy classes in a rigorous computer assisted proof way
+%Script finds the verifies the upper bounds in rigorous way
 
-%Requires: MaxSuccessProb_Utrans.m, DefineSets_Utrans_symbolic.m from mtcq
+%Requires: MaxSuccessProb_com_anticom_task.m, define_sets_switch_symbolic.m from mtcq
 
 %Author: Marco Túlio Quintino, https://github.com/mtcq, mtcq.mm@gmail.com
 %Last update: 19/08/2022
 
 MaxSuccessProb_Utrans;
 
-disp('We now use the computer assisted proof method rigorously certify the following upper bound for causal strategies')
+disp('We now use the computer assisted proof method rigorously certify the upper bounds')
 
-UpperPARsym=sym(879)/sym(1000)
+UpperPARsym=sym(89)/sym(100)
 UpperPARfloat=double(UpperPARsym)
 
-UpperSEQsym=sym(936)/sym(1000)
+UpperSEQsym=sym(91)/sym(100)
 UpperSEQfloat=double(UpperSEQsym)
 
-UpperGENsym=sym(937)/sym(1000)
+UpperGENsym=sym(92)/sym(100)
 UpperGENfloat=double(UpperGENsym)
 
 DefineSets_Utrans_symbolic;

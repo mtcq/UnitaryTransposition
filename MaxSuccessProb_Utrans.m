@@ -12,10 +12,10 @@ clear all
 d=2; %dimension
 DIM=[d d d d]; %vector with the dimension of spaces Input1 Input2 Output1 Output2
 k=2; %number of slots (numer of parties)
-Np=10;
-Nm=8;
-N=Np+Nm;
 DefineSets_Utrans %Load the sets
+Np=size(setP,3);
+Nm=size(setM,3);
+N=Np+Nm;
 %The ordering of spaces is: [I1 I2 O1 O2]
 
 %%%%%%%%% START: dual SDP for the PAR case %%%%%%%%%
